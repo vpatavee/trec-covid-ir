@@ -1,3 +1,4 @@
 .ipynb_checkpoints/
 *.pyc
-!tmp/README.md
+tmp/*
+!tmp/.gitkeep 
