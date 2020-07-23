@@ -2,6 +2,7 @@ import csv
 import os
 import json
 from collections import defaultdict
+import random
 
 
 def metadata2dict(path_to_metadata, patn_to_document_parses):
@@ -58,6 +59,3 @@ def metadata2dict(path_to_metadata, patn_to_document_parses):
             metadata_dict[cord_uid] = info
     return metadata_dict
             
-            
-
-

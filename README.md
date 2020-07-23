@@ -4,9 +4,22 @@
 
 ## Score
 
-TODO: Figure out how to run [trec_eval](https://github.com/usnistgov/trec_eval)
+1. Clone [trec_eval](https://github.com/usnistgov/trec_eval)
+2. Make
+```
+cd trec_eval
+make
+```
+3. Test by get a submission from [round 4](https://ir.nist.gov/covidSubmit/archive/archive-round4.html) and  compare the result with score report. For example,
+```
+wget https://ir.nist.gov/covidSubmit/archive/round4/covidex.r4.duot5.lr.gz
+gunzip covidex.r4.duot5.lr.gz
+wget https://ir.nist.gov/covidSubmit/data/qrels-covid_d4_j3.5-4.txt
+./trec_eval -c -m ndcg_cut.20 -m P.20 -m bpref -m map qrels-covid_d4_j3.5-4.txt covidex.r4.duot5.lr > result.txt
+```
 
-For now, run `python score.py <result> <qrel>`
+compare the `result.txt` with [report](https://ir.nist.gov/covidSubmit/archive/round4/covidex.r4.duot5.lr.pdf). If everything goes well, then do the same thing for your runs.
+
 
 ## Search
 
