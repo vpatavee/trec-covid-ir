@@ -46,7 +46,7 @@ def metadata2dict(path_to_metadata, patn_to_document_parses):
             elif pdf:
                 path = pdf[0]
             
-            if path is None:
+            if not path:
                 continue
             
             info = {

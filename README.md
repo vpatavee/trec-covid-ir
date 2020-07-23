@@ -21,14 +21,27 @@ wget https://ir.nist.gov/covidSubmit/data/qrels-covid_d4_j3.5-4.txt
 compare the `result.txt` with [report](https://ir.nist.gov/covidSubmit/archive/round4/covidex.r4.duot5.lr.pdf). If everything goes well, then do the same thing for your runs.
 
 
-## Search
+## py
 
-In search folder, we have process script and query script, each follow by run name / iteration. 
+We have a pair of process script and query script with run name e.g. `run_1_process.py`. 
+
 query file will save file in the submission format, ready to run `score.py`.
 
-process script takes the following argument: path_to_document_parses, path_to_processed_document_parses
+process script takes the following argument: path_to_data, path_to_output (store the process results e.g. doc vectors)
 
 query script takes the following argument: path_to_processed_document_parses, path_to_topics
+
+For examples:
+
+
+```
+mkdir tmp/run1
+cd py
+python run1_process.py ../../CORD-19/2020-06-19/ ../tmp/run1/
+python query
+```
+
+
 
 
 ## Revision Logs
