@@ -21,6 +21,11 @@ wget https://ir.nist.gov/covidSubmit/data/qrels-covid_d4_j3.5-4.txt
 compare the `result.txt` with [report](https://ir.nist.gov/covidSubmit/archive/round4/covidex.r4.duot5.lr.pdf). If everything goes well, then do the same thing for your runs.
 
 
+Get Round 4 topics set
+
+`wget https://ir.nist.gov/covidSubmit/data/topics-rnd4.xml`
+
+
 ## py
 
 We have a pair of process script and query script with run name e.g. `run_1_process.py`. 
@@ -37,14 +42,30 @@ For examples:
 ```
 mkdir tmp/run1
 cd py
-python run1_process.py ../../CORD-19/2020-06-19/ ../tmp/run1/
+python run_0_baseline.py -p ../../CORD-19/2020-06-19/ ../tmp/run0/
 python query
 ```
 
+How to create word2vec.py
 
+`python word2vec.py ../../CORD-19/2020-06-19/`
 
 
 ## Revision Logs
+
+
+### Run 0
+
+Process: Simple TFIDF + log
+Query: binary 
+```
+[pmeemeng@ip-10-66-39-234 trec_eval]$ ./trec_eval -c -m ndcg_cut.20 -m P.20 -m bpref -m map qrels-covid_d4_j3.5-4.txt report_run_0.txt
+map                     all     0.0433
+bpref                   all     0.2491
+P_20                    all     0.1544
+ndcg_cut_20             all     0.1342
+```
+
 
 ### Run 1
 
