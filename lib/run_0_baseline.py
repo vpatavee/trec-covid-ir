@@ -6,12 +6,10 @@ import os
 from collections import Counter
 import sys
 import numpy as np
-from gensim.models import KeyedVectors
 from sklearn.feature_extraction import DictVectorizer
 
 import spacy
-nlp = None
-
+nlp = spacy.load("en_core_web_sm")
 
 def create_tf(path_to_document_parses, metadata_dict, path_output):
 
@@ -135,11 +133,11 @@ def query():
     assert sim.shape[0] == len(topics_df), len(idx2uid)
     assert sim.shape[1] ==  len(idx2uid)
     
-    create_report(topics_df, sim, idx2uid)
+    create_report(topics_df, sim, idx2uid, "report_run_0.txt")
     print("finished create report")
 
     
-def create_report(topics_df, sim, idx2uid):
+def create_report(topics_df, sim, idx2uid, report_name):
     """
      topicid Q0 docid rank score run-tag
     """
@@ -156,7 +154,7 @@ def create_report(topics_df, sim, idx2uid):
             lines.append(template.format(tid, docid, rank, score))
     
     report = "\n".join(lines)
-    with open("report_run_0.txt", "w") as f:
+    with open(report_name, "w") as f:
         f.write(report)
             
 
@@ -164,7 +162,6 @@ if __name__ == "__main__":
     if sys.argv[1] == "-p":
         process() # -p path_to_data path_to_save_processed e.g. python run_0_baseline.py -p ../../CORD-19/2020-06-19/ ../tmp/run0/
     elif sys.argv[1] == "-q":
-        nlp = spacy.load("en_core_web_sm")
         query() # -q path_to_data path_to_save_processed  patn_to_topics e.g. python run_0_baseline.py -q ../../CORD-19/2020-06-19/ ../tmp/run0/ ../topics-rnd4.xml
     else:
         print("invalid usage")

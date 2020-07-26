@@ -99,3 +99,50 @@ model = Word2Vec(
     callbacks=[Callback(model_name)]
 )
 ```
+
+
+Result
+```
+$ ./trec_eval -c -m ndcg_cut.20 -m P.20 -m bpref -m map qrels-covid_d4_j3.5-4.txt report_run_1.txt
+map                     all     0.0339
+bpref                   all     0.2161
+P_20                    all     0.1444
+ndcg_cut_20             all     0.1269
+```
+
+Result GG Word2vec
+```
+map                     all     0.0026
+bpref                   all     0.0465
+P_20                    all     0.0211
+ndcg_cut_20             all     0.0191
+
+```
+
+
+## Run2
+
+basic solr
+
+setup solr
+```
+docker pull solr
+docker run -d -p 8983:8983 -t solr
+docker exec -it solr /bin/bash
+bin/solr create -c <corename> 
+
+```
+result
+
+```
+map                     all     0.0717
+bpref                   all     0.2781
+P_20                    all     0.2378
+ndcg_cut_20             all     0.2240
+```
+
+## Run 3
+
+{'map': '0.0511', 'bpref': '0.1721', 'P_20': '0.2211', 'ndcg_cut_20': '0.2084'}
+
+paragraph level solr
