@@ -67,6 +67,10 @@ ndcg_cut_20             all     0.1342
 ```
 
 
+```
+./trec_eval -c -m ndcg_cut.20 -m P.20 -m bpref -m map ../trec-covid-ir-round-5/qrels-covid_d4_j0.5-4.txt  ../scibert/anserini_scibert_rerank.txt
+```
+
 ### Run 1
 
 Process: Use Word2vec, convert to vectors document level all text, ltc, clean, uncase

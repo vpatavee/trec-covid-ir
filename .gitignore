@@ -2,4 +2,7 @@
 *.pyc
 tmp/*
 wv*
+*.xml
+*.json
+*.txt
 !tmp/.gitkeep 
