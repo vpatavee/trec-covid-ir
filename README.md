@@ -19,7 +19,7 @@ where the human judgement is available. The dataset consists of
 For those who are not familiar with Information Retrieval, check out this [textbook](https://nlp.stanford.edu/IR-book/pdf/irbookonlinereading.pdf). For those who are familiar with IR but not TREC, visit the [official website](https://trec.nist.gov/overview.html).
 
 
-## In this Repos
+## In this Repo
 
 
 As described in task definition, we can solve TREC-COVID challenge in three different ways; automatic, feedback and manual.
@@ -30,7 +30,6 @@ Here is [list](https://ir.nist.gov/covidSubmit/archive/archive-round4.html) of r
 people has used. Most efforts use the Lucene based search engine e.g. Elasticsearch, Solr or Anserini to 
 retrieve documents. Then use Deep Learning based approaches i.e. BERT, DeepRank etc to rerank the retrieve documents.
 
-
 In this repos, we will explore new techniques to improve the performance. We may have to reproduce some approaches that people made and start improving from that point. 
 
 Let's devide it into two sections
@@ -39,7 +38,6 @@ Let's devide it into two sections
 
 
 ### Rerank
-
 
 
 ## Evaluation
