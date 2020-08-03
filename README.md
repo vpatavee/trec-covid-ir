@@ -21,7 +21,6 @@ For those who are not familiar with Information Retrieval, check out this [textb
 
 ## In this Repos
 
-**Literature Review**
 
 As described in task definition, we can solve TREC-COVID challenge in three different ways; automatic, feedback and manual.
 Automatic is purely unsupervised. Feedback makes use of previous human judgements to improve the performance. Manual
@@ -33,6 +32,13 @@ retrieve documents. Then use Deep Learning based approaches i.e. BERT, DeepRank 
 
 
 In this repos, we will explore new techniques to improve the performance. We may have to reproduce some approaches that people made and start improving from that point. 
+
+Let's devide it into two sections
+
+### Retrieve Documents
+
+
+### Rerank
 
 
 
