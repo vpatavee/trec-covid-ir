@@ -36,6 +36,8 @@ Let's devide it into two sections
 
 ### Retrieve Documents
 
+[Anserini](https://github.com/castorini/anserini), a Lucene-based search engine provide a pretty high baseline for this dataset [here](https://github.com/castorini/anserini). We will start with Anserini baseline and try to improve from that such as query augmentation. But first, try to set another baseline with the popular search engine - [Solr](https://lucene.apache.org/solr/). We will try default similarity function and some others such as BM25.
+
 
 ### Rerank
 
