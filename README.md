@@ -41,6 +41,11 @@ Let's devide it into two sections
 
 ### Rerank
 
+In the [round 4 submission](https://ir.nist.gov/covidSubmit/archive/archive-round4.html), we see the use of BERT and DeepRank to rerank the retrieved document. In Anserini [Notebook](https://github.com/castorini/anserini-notebooks/blob/master/Pyserini%2BSciBERT_on_COVID_19_Demo.ipynb), it uses SciBERT to encode document and query then use cosine similarity. Let's try something different here i.e. BertForNextSentence.
+
+Also let's try simple things i.e. Word2Vec and compare.
+
+
 
 ## Evaluation
 
