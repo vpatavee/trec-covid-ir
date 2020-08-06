@@ -10,7 +10,7 @@ TREC-COVID Challenge is series of rounds. As of 8/2/2020, there five rounds. Eac
 new topics and new research papers. In this repo, I will use [round 4 dataset](https://ir.nist.gov/covidSubmit/data.html),
 where the human judgement is available. The dataset consists of
 
-1. The COVID-19 research papers dataset called [CORD-19](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases.html). Use 2020-07-16 version. To understand the datast, read [FAQ](https://github.com/allenai/cord19/blob/master/README.md).
+1. The COVID-19 research papers dataset called [CORD-19](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases.html). Use 2020-06-19 version. To understand the datast, read [FAQ](https://github.com/allenai/cord19/blob/master/README.md).
 
 2. Topics, download [here](https://ir.nist.gov/covidSubmit/data/topics-rnd4.xml).
 
