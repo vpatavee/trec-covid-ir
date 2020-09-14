@@ -40,6 +40,9 @@ def get_abstract(path, uid_to_use=None):
             cord_uid = row['cord_uid']
             if uid_to_use is None or cord_uid in uid_to_use:
                 abstract = row['abstract']
+                if not abstract.strip():
+                    print("Warning: empty abstract uid " + cord_uid)
+                    continue
                 abstracts[cord_uid] = abstract
             
     return abstracts
