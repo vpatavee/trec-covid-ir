@@ -4,6 +4,7 @@ venv*
 tmp/*
 wv*
 *.xml
+*Untitled.ipynb
 *.json
 *.txt
 !tmp/.gitkeep 
